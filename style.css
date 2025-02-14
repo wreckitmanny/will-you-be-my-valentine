@@ -1,0 +1,88 @@
+body {
+font-family: 'Georgia', serif;
+background-color: #e976b5; /* Light pink background */
+color: #c62828; /* Dark red text */
+display: flex;
+justify-content: center;
+align-items: center;
+height: 100vh;
+margin: 0;
+}
+
+.container {
+text-align: center;
+background-color: #ffffff; /* White container */
+padding: 2rem;
+border-radius: 10px;
+box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+font-size: 2.5rem;
+margin-bottom: 1.5rem;
+}
+
+.buttons {
+display: flex;
+justify-content: center;
+gap: 1rem;
+}
+
+button {
+font-size: 1.2rem;
+padding: 0.5rem 1.5rem;
+border: none;
+border-radius: 5px;
+cursor: pointer;
+transition: background-color 0.3s ease;
+}
+
+#yes-button {
+background-color: #c62828; /* Dark red */
+color: white;
+}
+
+#yes-button:hover {
+background-color: #e53935; /* Lighter red */
+}
+
+#no-button {
+background-color: #757575; /* Gray */
+color: white;
+}
+
+#no-button:hover {
+background-color: #4f311b; /* Lighter gray */
+}
+
+/* Add to your existing CSS */
+.gallery {
+display: flex;
+justify-content: center;
+gap: 1rem;
+margin-top: 1.5rem;
+}
+
+.gallery img {
+max-width: auto;
+height: auto;
+border-radius: 10px;
+box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.rose {
+position: absolute;
+width: 50px;
+height: 50px;
+animation: fall linear infinite;
+top: -50px;
+}
+
+@keyframes fall {
+0% {
+    transform: translateY(0%);
+}
+100% {
+    transform: translateY(110vh);
+}
+}
