@@ -54,3 +54,15 @@ body {
     #no-button:hover {
     background-color: #4f311b; /* Lighter gray */
     }
+
+    .container {
+        max-width: 500px;
+        text-align: center;
+        padding: 20px;
+        margin: auto;
+    }
+    
+    ul {
+        text-align: left; /* Aligns list items properly */
+    }
+    

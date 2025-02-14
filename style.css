@@ -23,20 +23,24 @@ font-size: 2.5rem;
 margin-bottom: 1.5rem;
 }
 
+ul {
+    text-align: left;
+}
+
 .buttons {
-display: flex;
-justify-content: center;
-gap: 1rem;
+    display: flex;
+    flex-direction: column; /* Stacks buttons on mobile */
+    align-items: center;
+    gap: 1rem;
 }
 
 button {
-font-size: 1.2rem;
-padding: 0.5rem 1.5rem;
-border: none;
-border-radius: 5px;
-cursor: pointer;
-transition: background-color 0.3s ease;
+    font-size: 1.5rem; /* Bigger text for mobile */
+    padding: 12px 20px; /* Better tap target */
+    width: 80%; /* Prevents tiny buttons */
+    max-width: 300px; /* Prevents them from being too large */
 }
+
 
 #yes-button {
 background-color: #c62828; /* Dark red */
@@ -56,34 +60,29 @@ color: white;
 background-color: #4f311b; /* Lighter gray */
 }
 
-/* Add to your existing CSS */
-.gallery {
-display: flex;
-justify-content: center;
-gap: 1rem;
-margin-top: 1.5rem;
+img {
+    max-width: 100%;
+    height: auto; /* Keeps aspect ratio */
+    display: block;
+    margin: auto; /* Centers images */
 }
 
-.gallery img {
-max-width: 100%;
-height: auto;
-border-radius: 10px;
-box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+.gallery {
+    display: flex;
+    flex-direction: column; /* Stacks images on mobile */
+    align-items: center;
+    gap: 1rem;
 }
 
 .rose {
-position: absolute;
-width: 50px;
-height: 50px;
-animation: fall linear infinite;
-top: -50px;
+    position: absolute;
+    width: 30px; /* Smaller for mobile */
+    height: auto;
+    animation: fall linear infinite;
+    top: -50px;
 }
 
 @keyframes fall {
-0% {
-    transform: translateY(0%);
-}
-100% {
-    transform: translateY(110vh);
-}
+    0% { transform: translateY(0%); }
+    100% { transform: translateY(110vh); } /* Ensures roses fully fall */
 }
