@@ -11,20 +11,24 @@ overflow-x: hidden;
 }
 
 .container {
+max-width: 600px;
 text-align: center;
 background-color: #ffffff; /* White container */
-padding: 2rem;
+padding: 20px;
+margin: auto;
 border-radius: 10px;
 box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
-h1 {
+h1, h2, h3 {
 font-size: 2.5rem;
-margin-bottom: 1.5rem;
+margin-bottom: 10px;
 }
 
 ul {
     text-align: left;
+    margin: 0 auto;
+    max-width: 500px;
 }
 
 .buttons {
@@ -61,17 +65,21 @@ background-color: #4f311b; /* Lighter gray */
 }
 
 img {
-    max-width: 100%;
+    max-width: 90%;
     height: auto; /* Keeps aspect ratio */
     display: block;
     margin: auto; /* Centers images */
+    border-radius: 10px;
 }
 
 .gallery {
     display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
     flex-direction: column; /* Stacks images on mobile */
     align-items: center;
     gap: 1rem;
+    margin-top: 1rem;
 }
 
 .rose {
