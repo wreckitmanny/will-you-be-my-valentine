@@ -65,7 +65,7 @@ background-color: #4f311b; /* Lighter gray */
 }
 
 
-.gallery img {
+.gallery {
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
