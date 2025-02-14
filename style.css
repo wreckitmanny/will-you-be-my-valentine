@@ -65,20 +65,13 @@ background-color: #4f311b; /* Lighter gray */
 }
 
 
-.gallery {
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    flex-direction: column; /* Stacks images on mobile */
-    align-items: center;
-    gap: 1rem;
-    margin-top: 1rem;
-    max-width: 90%;
-    height: auto; /* Keeps aspect ratio */
-    display: block;
-    margin: auto; /* Centers images */
-    border-radius: 10px;
+img {
+    width: 300px;
+    height: 400px;
+    object-fit: cover;
+
 }
+
 
 .rose {
     position: absolute;
