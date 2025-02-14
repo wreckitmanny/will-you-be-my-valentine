@@ -64,15 +64,8 @@ color: white;
 background-color: #4f311b; /* Lighter gray */
 }
 
-img {
-    max-width: 90%;
-    height: auto; /* Keeps aspect ratio */
-    display: block;
-    margin: auto; /* Centers images */
-    border-radius: 10px;
-}
 
-.gallery {
+.gallery img {
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
@@ -80,6 +73,11 @@ img {
     align-items: center;
     gap: 1rem;
     margin-top: 1rem;
+    max-width: 90%;
+    height: auto; /* Keeps aspect ratio */
+    display: block;
+    margin: auto; /* Centers images */
+    border-radius: 10px;
 }
 
 .rose {
