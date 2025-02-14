@@ -35,11 +35,7 @@ noButton.addEventListener('click', () => {
     const buttonWidth = noButton.offsetWidth;
     const buttonHeight = noButton.offsetHeight;
     
-
-    // Redirect to "No" page after a delay
-    setTimeout(() => {
-        window.location.href = 'no.html';
-    }, 1000);
+    window.location.href = 'no.html';
 });
 
 window.addEventListener("pageshow", function (event) {
