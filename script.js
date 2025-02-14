@@ -25,8 +25,6 @@ yesButton.addEventListener('click', () => {
 noButton.addEventListener('click', () => {
     sessionStorage.setItem("noClicked", "true"); // Store that "No" was clicked
 
-    alert("Are you sure? Maybe give it another thought! 😊");
-
     noButton.style.position = 'absolute';
 
     // Get viewport dimensions
@@ -36,18 +34,12 @@ noButton.addEventListener('click', () => {
     // Get button size
     const buttonWidth = noButton.offsetWidth;
     const buttonHeight = noButton.offsetHeight;
-
-    // Ensure button stays inside screen
-    const randomX = Math.min(screenWidth - buttonWidth - 10, Math.random() * (screenWidth - buttonWidth));
-    const randomY = Math.min(screenHeight - buttonHeight - 10, Math.random() * (screenHeight - buttonHeight));
-
-    noButton.style.left = `${randomX}px`;
-    noButton.style.top = `${randomY}px`;
+    
 
     // Redirect to "No" page after a delay
     setTimeout(() => {
         window.location.href = 'no.html';
-    }, 5000);
+    }, 1000);
 });
 
 window.addEventListener("pageshow", function (event) {
