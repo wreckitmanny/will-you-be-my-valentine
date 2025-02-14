@@ -24,18 +24,34 @@ yesButton.addEventListener('click', () => {
 // Handle "No" button click
 noButton.addEventListener('click', () => {
     sessionStorage.setItem("noClicked", "true"); // Store that "No" was clicked
-    noButton.style.position = 'absolute';
-    noButton.style.left = `${Math.random() * 90 + 10}%`;
-    noButton.style.top = `${Math.random() * 80 + 10}%`;
 
+    alert("Are you sure? Maybe give it another thought! 😊");
+
+    noButton.style.position = 'absolute';
+
+    // Get viewport dimensions
+    const screenWidth = window.innerWidth;
+    const screenHeight = window.innerHeight;
+
+    // Get button size
+    const buttonWidth = noButton.offsetWidth;
+    const buttonHeight = noButton.offsetHeight;
+
+    // Ensure button stays inside screen
+    const randomX = Math.min(screenWidth - buttonWidth - 10, Math.random() * (screenWidth - buttonWidth));
+    const randomY = Math.min(screenHeight - buttonHeight - 10, Math.random() * (screenHeight - buttonHeight));
+
+    noButton.style.left = `${randomX}px`;
+    noButton.style.top = `${randomY}px`;
+
+    // Redirect to "No" page after a delay
     setTimeout(() => {
         window.location.href = 'no.html';
-    }, 5000); 
+    }, 5000);
 });
 
-// ✅ **Fix: Force a Full Page Reload When Using the Back Button**
 window.addEventListener("pageshow", function (event) {
-    if (event.persisted) {
-        window.location.reload(); // Force a full reload when navigating back
+    if (event.persisted || window.performance && window.performance.navigation.type === 2) {
+        window.location.href = "index.html"; // Force redirect back to index
     }
 });
