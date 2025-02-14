@@ -1,7 +1,7 @@
 body {
     font-family: 'Comic Sans MS', serif;
-    background-color: #000000; /* Light pink background */
-    color: #e34ccd; /* Dark red text */
+    background-color: #000000; /* black */
+    color: #e34ccd; /* Pink */
     display: flex;
     justify-content: center;
     align-items: center;
@@ -11,7 +11,7 @@ body {
     
 .container {
 text-align: center;
-background-color: #000000; /* White container */
+background-color: #000000; /* Black container */
 padding: 2rem;
 border-radius: 10px;
 box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
