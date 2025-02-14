@@ -11,7 +11,7 @@ overflow-x: hidden;
 }
 
 .container {
-max-width: 600px;
+max-width: auto;
 text-align: center;
 background-color: #40eaba; 
 padding: 20px;
